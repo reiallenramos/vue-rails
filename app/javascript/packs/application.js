@@ -8,7 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import Vue from 'vue/dist/vue.esm'
-import Card from '../card.vue'
+import App from '../app.vue'
 
 document.addEventListener("turbolinks:load", function() {
   var element = document.querySelector("#boards")
@@ -18,8 +18,8 @@ document.addEventListener("turbolinks:load", function() {
       data: {
         lists: JSON.parse(element.dataset.lists)
       },
-      template: "<Card :original_lists='lists' />",
-      components: { Card }
+      template: "<App :original_lists='lists' />",
+      components: { App }
     })
   }
 });
